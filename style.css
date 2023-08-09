@@ -60,7 +60,7 @@ section {
 
 @keyframes spin {
     to {
-        background-position: -8192px 0;
+        background-position: 8192px 0;
     }
 }
 
@@ -69,7 +69,7 @@ section {
     width: 60vh;
     height: 15vh;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 0.77vh;
     text-align: center;
     z-index: 1;
 }
@@ -79,7 +79,7 @@ section {
     width: 16vh;
     height: 7vh;
     margin: 25px;
-    border-radius: 10px;
+    border-radius: 0.77vh;
     transition: 0.5s;
     display: grid;
     place-items: center;
@@ -114,6 +114,7 @@ section {
     width: 100%;
     color: white;
     text-align: center;
+    display: inline-block;
 }
 
 #main footer a {
@@ -121,4 +122,14 @@ section {
     font-size: 1.7vh;
     text-decoration: none;
     font-weight: bold;
+}
+
+#main footer p {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1.7vh;
+    font-weight: bold;
+}
+
+#main footer a:hover {
+    color: rgba(255, 255, 255, 0.75);
 }
