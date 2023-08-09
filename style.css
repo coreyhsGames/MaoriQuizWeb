@@ -5,18 +5,6 @@ body {
     margin: 0;
 }
 
-#main h1 {
-    color: #ffff;
-    font-size: 7vh;
-    margin: 0;
-}
-
-#main h2 {
-    color: #ffff;
-    font-size: 3vh;
-    margin: 5px;
-}
-
 section {
     display: grid;
     place-items: center;
@@ -47,8 +35,8 @@ section {
 }
 
 #main #earth {
-    width: 80vh;
-    height: 80vh;
+    width: 75vh;
+    height: 75vh;
     position: fixed;
     background: url(images/earthMap.jpg) repeat-x;
     image-rendering: auto;
@@ -68,10 +56,22 @@ section {
     background: rgba(36, 36, 36, 0.75);
     width: 60vh;
     height: 15vh;
-    padding: 25px;
+    padding: 2.67vh;
     border-radius: 0.77vh;
     text-align: center;
     z-index: 1;
+}
+
+#main h1 {
+    color: #ffff;
+    font-size: 7vh;
+    margin: 0;
+}
+
+#main h2 {
+    color: #ffff;
+    font-size: 3vh;
+    margin: 5px;
 }
 
 #main #playbtn {
@@ -132,4 +132,143 @@ section {
 
 #main footer a:hover {
     color: rgba(255, 255, 255, 0.75);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 650px) {
+    #main #earth {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    #main #box {
+        width: 35vh;
+        height: 8vh;
+    }
+
+    #main h1 {
+        font-size: 4vh;
+    }
+
+    #main h2 {
+        font-size: 2vh;
+    }
+
+    #main #playbtn {
+        width: 14vh;
+        height: 5vh;
+    }
+
+    #main #playbtn:hover {
+        width: 16vh;
+        height: 7vh;
+    }
+
+    #main #playbtn div {
+        font-size: 2vh;
+    }
+
+    #main #playbtn:hover div {
+        font-size: 2.75vh;
+    }
+
+    #main footer a {
+        font-size: 1.5vh;
+    }
+
+    #main footer p {
+        font-size: 1.5vh;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #main #earth {
+        width: 40vh;
+        height: 40vh;
+    }
+
+    #main #box {
+        width: 25vh;
+        height: 5vh;
+    }
+
+    #main h1 {
+        font-size: 2.5vh;
+    }
+
+    #main h2 {
+        font-size: 1.28vh;
+    }
+
+    #main #playbtn {
+        width: 12vh;
+        height: 6vh;
+    }
+
+    #main #playbtn:hover {
+        width: 14vh;
+        height: 8vh;
+    }
+
+    #main #playbtn div {
+        font-size: 2vh;
+    }
+
+    #main #playbtn:hover div {
+        font-size: 2.5vh;
+    }
+
+    #main footer a {
+        font-size: 1.5vh;
+    }
+
+    #main footer p {
+        font-size: 1.5vh;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    #main #earth {
+        width: 35vh;
+        height: 35vh;
+    }
+
+    #main #box {
+        width: 20vh;
+        height: 6vh;
+    }
+
+    #main h1 {
+        font-size: 2.3vh;
+    }
+
+    #main h2 {
+        font-size: 1.3vh;
+    }
+
+    #main #playbtn {
+        width: 14vh;
+        height: 5vh;
+    }
+
+    #main #playbtn:hover {
+        width: 16vh;
+        height: 7vh;
+    }
+
+    #main #playbtn div {
+        font-size: 2vh;
+    }
+
+    #main #playbtn:hover div {
+        font-size: 2.5vh;
+    }
+
+    #main footer a {
+        font-size: 1.25vh;
+    }
+
+    #main footer p {
+        font-size: 1.25vh;
+    }
 }
