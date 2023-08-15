@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffff;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+#bg {
+    background-image: url(images/RDT_20230810_1052198112920801057974922.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+#bg::before {
+    content:""; 
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(0, 0, 0) 100%);
+    height: 40%; 
+    z-index: 0;
+}
+
+#text {
+    z-index: 1;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+}
+
+#text h1 {
+    color: #ffff;
+    font-size: 64px;
+}
+
+#text h2 {
+    color: #ffff;
+    margin-top: 5px;
+}
+
+#playbtn {
+    background: #68e758;
+    width: 20vh;
+    height: 7vh;
+    margin: 25px;
+    border-radius: 0.77vh;
+    transition: 0.5s;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+#playbtn div {
+    color: #000000;
+    font-size: 2.5vh;
+    text-align: center;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+#playbtn:hover {
+    background: #3bc529;
+}
+
+#playbtn:hover div {
+    font-size: 3vh;
+}
