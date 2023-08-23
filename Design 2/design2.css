@@ -26,7 +26,7 @@ section {
     min-height: 100vh;
     z-index: 0;
     image-rendering: auto;
-    background-image: url("images/design 2/Makarora_River_and_Courtneys_Flat,_New_Zealand_02.jpg");
+    background-image: url("../images/design 2/Makarora_River_and_Courtneys_Flat,_New_Zealand_02.jpg");
 }
 
 #bg::before {

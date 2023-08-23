@@ -26,7 +26,7 @@ section {
     min-height: 100vh;
     z-index: 0;
     image-rendering: auto;
-    background-image: url("images/design 3/Dalys_Wharf_in_Akaroa_Canterbury_New_Zealand_04.jpg");
+    background-image: url("../images/design 3/Dalys_Wharf_in_Akaroa_Canterbury_New_Zealand_04.jpg");
     transform: scaleX(-1);
 }
 
