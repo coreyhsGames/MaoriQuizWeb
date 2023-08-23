@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffff;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+}
+
+section {
+    display: flex;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+#bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 0;
+    image-rendering: auto;
+    background-image: url("images/design 3/Dalys_Wharf_in_Akaroa_Canterbury_New_Zealand_04.jpg");
+    transform: scaleX(-1);
+}
+
+#bg::before {
+    content:""; 
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgb(0, 0, 0) 125%);
+    height: 100%; 
+    z-index: 0;
+}
+
+.left-side {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    padding-left: 10%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#bg img {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+#text {
+    z-index: 1;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+}
+
+#text h1 {
+    color: #ffff;
+    font-size: 64px;
+}
+
+#text h2 {
+    color: #ffff;
+    margin-top: 5px;
+}
+
+a.play {
+    background: #68e758;
+    margin: 25px;
+    padding: 1.07vh 2.67vh;
+    border-radius: 0.77vh;
+    transition: 0.5s;
+    display: flex;
+    place-items: center;
+    align-content: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.btn-section svg {
+    width: 50px;
+    height: 50px;
+}
+
+a.play div {
+    color: #000000;
+    font-size: 2.5vh;
+    text-align: center;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-items: center;
+}
+
+a.play:hover {
+    background: #3bc529;
+}
+
+a.play {
+    background: #68e758;
+    margin: 25px;
+    padding: 1.07vh 2.67vh;
+    border-radius: 0.77vh;
+    transition: 0.5s;
+    display: flex;
+    place-items: center;
+    align-content: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.btn-section svg {
+    width: 50px;
+    height: 50px;
+}
+
+a.learnMore {
+    background: #bebebe;
+    margin: 25px;
+    padding: 1.07vh 2.67vh;
+    border-radius: 0.77vh;
+    transition: 0.5s;
+    display: flex;
+    place-items: center;
+    align-content: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+a.learnMore div {
+    color: #ffff;
+    font-size: 2.5vh;
+    text-align: center;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-items: center;
+}
+
+a.learnMore:hover {
+    background: #b0b0b0;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1.7vh;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1.7vh;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
