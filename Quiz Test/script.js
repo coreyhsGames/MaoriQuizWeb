@@ -4,6 +4,7 @@ const questionContainer = document.getElementById('question-container');
 const questionText = document.getElementById('question');
 const questionInfo = document.getElementById('question-info');
 const answerBtns = document.getElementById('answer-btns');
+const mainHeader = document.getElementById('main-header');
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -12,6 +13,7 @@ nextBtn.addEventListener('click', nextQuestion);
 
 function startGame() {
     startBtn.classList.add('hide');
+    mainHeader.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     questionContainer.classList.remove('hide');
@@ -31,8 +33,12 @@ function setNextQuestion() {
 function showQuestion(question) {
     questionInfo.innerText = `Question ${currentQuestionIndex + 1} of ${shuffledQuestions.length}`
     questionText.innerText = question.question;
-    question.answers.forEach(answer => {
-        const btn = document.createElement('btn');
+
+    let shuffledAnswers;
+    shuffledAnswers = Array.from(question.answers).sort(() => Math.random() - 0.5);
+    
+    shuffledAnswers.forEach(answer => {
+        const btn = document.createElement('button');
         btn.innerText = answer.text;
         btn.classList.add('btn');
 
@@ -59,11 +65,12 @@ function selectAnswer(element) {
     setStatusClass(document.body, correct);
     Array.from(answerBtns.children).forEach(btn => {
         setStatusClass(btn, btn.dataset.correct);
+        btn.disabled = true;
     });
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextBtn.classList.remove('hide');
     } else {
-        startBtn.innerText = 'Restart';
+        startBtn.innerText = 'Finish';
         startBtn.classList.remove('hide');
     }
 }
@@ -84,21 +91,21 @@ function clearStatusClass(element) {
 
 const questions = [
     {
-        question: 'What is 5 + 4?',
+        question: 'What year was the Treaty of Waitangi signed?',
         answers: [
-            { text: '9', correct: true },
-            { text: '54', correct: false },
-            { text: '10', correct: false },
-            { text: '7', correct: false }
+            { text: '1840', correct: true },
+            { text: '1845', correct: false },
+            { text: '1835', correct: false },
+            { text: '1850', correct: false }
         ]
     },
     {
-        question: 'What is 9 + 11',
+        question: 'What is the Maori name for New Zealand?',
         answers: [
-            { text: '911', correct: false },
-            { text: '20', correct: true },
-            { text: '5', correct: false },
-            { text: '119', correct: false }
+            { text: 'Niu Tirani', correct: false },
+            { text: 'Aoetearoa', correct: true },
+            { text: 'Waka-O-Aoraki', correct: false },
+            { text: 'Tamaki Makaurau', correct: false }
         ]
     }
 ]

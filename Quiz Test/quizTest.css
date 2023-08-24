@@ -35,6 +35,12 @@ body.wrong {
     box-shadow: 0 0 10px 2px;
 }
 
+.main-header {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 .question {
     font-size: 2rem;
     text-align: center;
