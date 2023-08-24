@@ -10,7 +10,7 @@ body {
 }
 
 section {
-    display: flex;
+    display: grid;
     place-items: center;
     align-content: center;
     min-height: 100vh;
@@ -26,8 +26,7 @@ section {
     min-height: 100vh;
     z-index: 0;
     image-rendering: auto;
-    background-image: url("../images/design 3/Dalys_Wharf_in_Akaroa_Canterbury_New_Zealand_04.jpg");
-    transform: scaleX(-1);
+    background-image: url("../images/design2/Makarora_River_and_Courtneys_Flat,_New_Zealand_02.jpg");
 }
 
 #bg::before {
@@ -36,24 +35,9 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgb(0, 0, 0) 125%);
-    height: 100%; 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,rgb(0, 0, 0) 100%);
+    height: 40%; 
     z-index: 0;
-}
-
-.left-side {
-    width: 40%;
-    height: 80%;
-    display: flex;
-    padding-left: 10%;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.btn-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 #bg img {
@@ -78,83 +62,35 @@ section {
     margin-top: 5px;
 }
 
-a.play {
+#playbtn {
     background: #68e758;
+    width: 20vh;
+    height: 7vh;
     margin: 25px;
-    padding: 1.07vh 2.67vh;
     border-radius: 0.77vh;
     transition: 0.5s;
-    display: flex;
+    display: grid;
     place-items: center;
     align-content: center;
     z-index: 1;
     text-decoration: none;
 }
 
-.btn-section svg {
-    width: 50px;
-    height: 50px;
-}
-
-a.play div {
+#playbtn div {
     color: #000000;
     font-size: 2.5vh;
     text-align: center;
     transition: 0.5s;
     width: 100%;
     height: 100%;
-    display: flex;
-    place-items: center;
 }
 
-a.play:hover {
+#playbtn:hover {
     background: #3bc529;
 }
 
-a.play {
-    background: #68e758;
-    margin: 25px;
-    padding: 1.07vh 2.67vh;
-    border-radius: 0.77vh;
-    transition: 0.5s;
-    display: flex;
-    place-items: center;
-    align-content: center;
-    z-index: 1;
-    text-decoration: none;
-}
-
-.btn-section svg {
-    width: 50px;
-    height: 50px;
-}
-
-a.learnMore {
-    background: #bebebe;
-    margin: 25px;
-    padding: 1.07vh 2.67vh;
-    border-radius: 0.77vh;
-    transition: 0.5s;
-    display: flex;
-    place-items: center;
-    align-content: center;
-    z-index: 1;
-    text-decoration: none;
-}
-
-a.learnMore div {
-    color: #ffff;
-    font-size: 2.5vh;
-    text-align: center;
-    transition: 0.5s;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    place-items: center;
-}
-
-a.learnMore:hover {
-    background: #a1a1a1;
+#playbtn:hover div {
+    font-size: 3vh;
 }
 
 footer {
