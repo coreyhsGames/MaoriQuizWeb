@@ -47,10 +47,13 @@ body.wrong {
     font-weight: bold;
 }
 
-.question-info {
+.info-container {
+    margin: 0 10px 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 1.25rem;
     color: rgb(42, 42, 42);
-    margin-bottom: 10px;
 }
 
 .btn-grid {

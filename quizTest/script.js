@@ -3,15 +3,18 @@ const nextBtn = document.getElementById('next-btn');
 const questionContainer = document.getElementById('question-container');
 const questionText = document.getElementById('question');
 const questionInfo = document.getElementById('question-info');
+const scoreInfo = document.getElementById('score-info');
 const answerBtns = document.getElementById('answer-btns');
 const mainHeader = document.getElementById('main-header');
 
-let shuffledQuestions, currentQuestionIndex;
+let shuffledQuestions, currentQuestionIndex, score = 0;
 
 startBtn.addEventListener('click', startGame);
 nextBtn.addEventListener('click', nextQuestion);
 
 function startGame() {
+    score = 0;
+    scoreInfo.innerText = `Score: ${score}`;
     startBtn.classList.add('hide');
     mainHeader.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
@@ -36,7 +39,7 @@ function showQuestion(question) {
 
     let shuffledAnswers;
     shuffledAnswers = Array.from(question.answers).sort(() => Math.random() - 0.5);
-    
+
     shuffledAnswers.forEach(answer => {
         const btn = document.createElement('button');
         btn.innerText = answer.text;
@@ -72,6 +75,11 @@ function selectAnswer(element) {
     } else {
         startBtn.innerText = 'Finish';
         startBtn.classList.remove('hide');
+    }
+
+    if (correct) {
+        score++;
+        scoreInfo.innerText = `Score: ${score}`;
     }
 }
 
