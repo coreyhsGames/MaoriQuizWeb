@@ -7,11 +7,29 @@ const questionInfo = document.getElementById('question-info');
 const scoreInfo = document.getElementById('score-info');
 const answerBtns = document.getElementById('answer-btns');
 const mainHeader = document.getElementById('main-header');
+const fullImgView = document.getElementById('full-img-view');
+const fullImg = document.getElementById('full-img')
+const closeBtn = document.getElementById('close-btn');
 
-let shuffledQuestions, currentQuestionIndex =0, score = 0;
+let shuffledQuestions, currentQuestionIndex = 0, score = 0;
 
 startBtn.addEventListener('click', startGame);
 nextBtn.addEventListener('click', nextQuestion);
+
+questionImg.addEventListener('click', showFullImg);
+closeBtn.addEventListener('click', closeFullImg);
+
+function showFullImg() {
+    fullImgView.classList.remove('hide');
+}
+
+function closeFullImg() {
+    fullImgView.classList.add('hide');
+}
+
+function setFullImg(imgSrc) {
+    fullImg.src = imgSrc;
+}
 
 function startGame() {
     score = 0;
@@ -42,7 +60,8 @@ function showQuestion(question) {
         questionImg.classList.add('hide');
     } else if (question.type == 'image') {
         questionImg.classList.remove('hide');
-        questionImg.src = question.image;
+        questionImg.style.backgroundImage = `url(${question.image})`;
+        setFullImg(question.image);
     }
 
     let shuffledAnswers;
@@ -130,7 +149,7 @@ const questions = [
     {
         type: 'image',
         question: 'What city is this in New Zealand?',
-        image: "../images/quizTest/Auckland_skyline_from_harbor_bridge_20_September_2019.jpg",
+        image: "../images/quizTest/AYDnyoodDp.jpg",
         answers: [
             { text: 'Christchruch', correct: false },
             { text: 'Wellington', correct: false },
@@ -141,7 +160,7 @@ const questions = [
     {
         type: 'image',
         question: "What is New Zealand's tallest mountain?",
-        image: "../images/quizTest/Mt_Sefton_massif_Aoraki_-_Mount_Cook_National_Park_New_Zealand.jpg",
+        image: "../images/quizTest/dXsyfNlxWM.jpg",
         answers: [
             { text: 'Mount Cook', correct: true },
             { text: 'Mount Ruapehu', correct: false },
@@ -152,7 +171,7 @@ const questions = [
     {
         type: 'image',
         question: "Name of the sea between Australia and New Zealand.",
-        image: "../images/quizTest/640px-Australia_and_New_Zealand_topic_image_Satellite_image.jpg",
+        image: "../images/quizTest/sLQIXFqDnO.jpg",
         answers: [
             { text: 'Australian Sea', correct: false },
             { text: 'Oceaniac Sea', correct: false },
