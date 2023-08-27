@@ -6,7 +6,9 @@
 }
 
 body {
-    background-color: var(--hex-neutral);
+    background-image: url("../images/quizTest/WRKMDb7BkD.jpg");
+    background-position: center;
+    background-size: cover;
     padding: 0;
     margin: 0;
     display: flex;
@@ -14,16 +16,19 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.5s;
     font-family: 'Open Sans', sans-serif;
 }
 
-body.correct {
-    background-color: var(--hex-correct);
-}
-
-body.wrong {
-    background-color: var(--hex-wrong);
+body::before {
+    content: "";
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.25;
+    height: 100%; 
+    z-index: -1;
 }
 
 .container {
@@ -35,10 +40,17 @@ body.wrong {
     box-shadow: 0 0 10px 2px;
 }
 
-.main-header {
-    font-size: 2rem;
+.main {
     text-align: center;
     margin-bottom: 15px;
+}
+
+.main.header-1 {
+    font-size: 2rem;
+}
+
+.main.header-2 {
+    font-size: 1.5rem;
 }
 
 .question {
@@ -54,6 +66,7 @@ body.wrong {
     justify-content: space-between;
     font-size: 1.25rem;
     color: rgb(42, 42, 42);
+    font-weight: bold;
 }
 
 .btn-grid {
@@ -87,7 +100,7 @@ body.wrong {
     background-color: var(--hex-wrong);
 }
 
-.start-btn, .next-btn, .close-btn {
+.start-btn, .next-btn, .close-btn, .quit-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 7px 12px;

@@ -1,4 +1,5 @@
 const startBtn = document.getElementById('start-btn');
+const quitBtn = document.getElementById('quit-btn');
 const nextBtn = document.getElementById('next-btn');
 const questionContainer = document.getElementById('question-container');
 const questionText = document.getElementById('question');
@@ -15,6 +16,7 @@ let shuffledQuestions, currentQuestionIndex = 0, score = 0;
 
 startBtn.addEventListener('click', startGame);
 nextBtn.addEventListener('click', nextQuestion);
+quitBtn.addEventListener('click', quitGame);
 
 questionImg.addEventListener('click', showFullImg);
 closeBtn.addEventListener('click', closeFullImg);
@@ -36,10 +38,18 @@ function startGame() {
     scoreInfo.innerText = `Score: ${score} / 0`;
     startBtn.classList.add('hide');
     mainHeader.classList.add('hide');
+    quitBtn.classList.remove('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     questionContainer.classList.remove('hide');
     setNextQuestion();
+}
+
+function quitGame() {
+    startBtn.classList.remove('hide');
+    mainHeader.classList.remove('hide');
+    quitBtn.classList.add('hide');
+    questionContainer.classList.add('hide');
 }
 
 function nextQuestion() {
@@ -125,6 +135,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
+// Quiz Questions
 const questions = [
     {
         type: 'word',
@@ -170,13 +181,44 @@ const questions = [
     },
     {
         type: 'image',
-        question: "Name of the sea between Australia and New Zealand.",
+        question: "Name the sea between Australia and New Zealand.",
         image: "../images/quizTest/sLQIXFqDnO.jpg",
         answers: [
             { text: 'Australian Sea', correct: false },
             { text: 'Oceaniac Sea', correct: false },
             { text: 'Tasman Sea', correct: true },
             { text: 'Coral Sea', correct: false }
+        ]
+    },
+    {
+        type: 'word',
+        question: "What is New Zealand's most populated city?",
+        answers: [
+            { text: 'Auckland', correct: true },
+            { text: 'Hamilton', correct: false },
+            { text: 'Dunedin', correct: false },
+            { text: 'Christchurch', correct: false }
+        ]
+    },
+    {
+        type: 'word',
+        question: "Which of these is an official language of New Zealand?",
+        answers: [
+            { text: 'Spanish', correct: false },
+            { text: 'Maori', correct: true },
+            { text: 'Chinese', correct: false },
+            { text: 'NZ Sign Language', correct: true }
+        ]
+    },
+    {
+        type: 'image',
+        question: "Where is this government building located in New Zealand?",
+        image: "../images/quizTest/AnMoWAx9Rb.jpg",
+        answers: [
+            { text: 'Auckland', correct: false },
+            { text: 'Christchurch', correct: false },
+            { text: 'Wellington', correct: true },
+            { text: 'Tauranga', correct: false }
         ]
     },
 ]
