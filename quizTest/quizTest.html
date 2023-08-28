@@ -12,7 +12,7 @@
     <div class="container">
         <div id="main-header">
             <div class="main header-1">New Zealand Quiz</div>
-            <div class="main header-2">Select a difficulty: TBA</div>
+            <div class="main header-2">Select a difficulty:</div>
         </div>
         <div id="question-container" class="question-container hide">
             <div id="info-container" class="info-container">
@@ -22,6 +22,7 @@
             </div>
             <div id="question" class="question">Question</div>
             <div title="Click to see full view" id="question-image" class="question-image" style="background-image: none;"></div>
+            <div id="question-result" class="question-result hide"></div>
             <div id="answer-btns" class="answer-btns btn-grid">
                 <button class="btn">Answer 1</button>
                 <button class="btn">Answer 2</button>
@@ -30,9 +31,13 @@
             </div>
         </div>
         <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="quit-btn" class="quit-btn btn hide">Quit</button>
+            <div id="difficulty-btns" class="difficulty-btns">
+                <button id="easy-btn" class="difficulty-btn btn">Easy</button>
+                <button id="medium-btn" class="difficulty-btn btn">Medium</button>
+                <button id="hard-btn" class="difficulty-btn btn">Hard</button>
+            </div>
             <button id="next-btn" class="next-btn btn hide">Next</button>
+            <button id="quit-btn" class="quit-btn btn hide">Quit</button>
         </div>
     </div>
     <div id="full-img-view" class="full-img-view hide">

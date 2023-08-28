@@ -26,7 +26,7 @@ body::before {
     left: 0;
     right: 0;
     background: black;
-    opacity: 0.25;
+    opacity: 0.5;
     height: 100%; 
     z-index: -1;
 }
@@ -57,6 +57,22 @@ body::before {
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
+}
+
+.question-result {
+    margin: 5px;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.question-result.correct {
+    color: var(--hex-correct);
+}
+
+.question-result.wrong {
+    color: var(--hex-wrong);
 }
 
 .info-container {
@@ -100,7 +116,7 @@ body::before {
     background-color: var(--hex-wrong);
 }
 
-.start-btn, .next-btn, .close-btn, .quit-btn {
+.start-btn, .next-btn, .close-btn, .quit-btn, .difficulty-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 7px 12px;
@@ -124,6 +140,7 @@ body::before {
     background-repeat: no-repeat;
     image-rendering: auto;
     cursor: pointer;
+    box-shadow: 0 0 10px 2px;
 }
 
 .full-img-view {
