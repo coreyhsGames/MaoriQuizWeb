@@ -32,6 +32,7 @@ quitBtn.addEventListener('click', quitGame);
 questionImg.addEventListener('click', showFullImg);
 closeBtn.addEventListener('click', closeFullImg);
 
+// Difficulty Button Events
 easyBtn.addEventListener('click', function() {
     selectedDifficulty = 'Easy';
     startGame(selectedDifficulty);
@@ -182,7 +183,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
-// Quiz Questions
+// Easy Quiz Questions
 const easyQuestions = [
     {
         type: 'word',
@@ -286,11 +287,12 @@ const easyQuestions = [
             { text: 'Maori', correct: true },
             { text: 'Polynesians', correct: false },
             { text: 'Aboriginals', correct: false },
-            { text: 'Hawaiian', correct: true }
+            { text: 'Hawaiian', correct: false }
         ]
     },
 ]
 
+// Medium Quiz Questions
 const mediumQuestions = [
     {
         type: 'word',
@@ -304,6 +306,7 @@ const mediumQuestions = [
     },
 ]
 
+// Hard Quiz Questions
 const hardQuestions = [
     {
         type: 'word',

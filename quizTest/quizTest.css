@@ -92,6 +92,18 @@ body::before {
     margin: 20px 0;
 }
 
+#easy-btn {
+    background-color: green;
+}
+
+#medium-btn {
+    background-color: orange;
+}
+
+#hard-btn {
+    background-color: red;
+}
+
 .btn {
     background-color: var(--hex-neutral);
     border-radius: 5px;
