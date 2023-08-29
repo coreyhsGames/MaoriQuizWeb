@@ -134,7 +134,7 @@ body::before {
     border-width: 3px;
 }
 
-.start-btn, .next-btn, .close-btn, .quit-btn, .difficulty-btn {
+.start-btn, .next-btn, .close-btn, .quit-btn, .difficulty-btn, .results-btn {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 7px 12px;
@@ -177,6 +177,30 @@ body::before {
     border-radius: 15px;
     box-shadow: 0 0 10px 2px;
     margin-bottom: 25px;
+}
+
+.quiz-results {
+    text-align: center;
+}
+
+.quiz-results .results-header {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.quiz-results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.quiz-results table td {
+    border: 1px solid #cccccc;
+    padding: 8px 15px;
+    font-weight: bold;
+    text-align: left;
+    width: 50%;
+    font-size: 1.25rem;
 }
 
 .hide {

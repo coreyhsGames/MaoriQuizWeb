@@ -24,6 +24,15 @@ const easyBtn = document.getElementById('easy-btn');
 const mediumBtn = document.getElementById('medium-btn');
 const hardBtn = document.getElementById('hard-btn');
 
+// Quiz Result Elements
+const quizResultsContainer = document.getElementById('quiz-results');
+const resultsBtn = document.getElementById('results-btn');
+const qrTotalQuestions = document.getElementById('total-questions');
+const qrTotalCorrect = document.getElementById('total-correct');
+const qrTotalWrong = document.getElementById('total-wrong');
+const qrScorePercentage = document.getElementById('score-percentage');
+const qrTotalScore = document.getElementById('total-score');
+
 let shuffledQuestions, currentQuestionIndex = 0, score = 0, selectedDifficulty, questions;
 
 // Click Events
@@ -31,6 +40,7 @@ nextBtn.addEventListener('click', nextQuestion);
 quitBtn.addEventListener('click', quitGame);
 questionImg.addEventListener('click', showFullImg);
 closeBtn.addEventListener('click', closeFullImg);
+resultsBtn.addEventListener('click', showResults);
 
 // Difficulty Button Events
 easyBtn.addEventListener('click', function () {
@@ -92,6 +102,7 @@ function quitGame() {
     quitBtn.classList.add('hide');
     questionContainer.classList.add('hide');
     nextBtn.classList.add('hide');
+    quizResultsContainer.classList.add('hide');
 }
 
 function nextQuestion() {
@@ -160,6 +171,8 @@ function selectAnswer(element) {
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextBtn.classList.remove('hide');
+    } else {
+        resultsBtn.classList.remove('hide');
     }
 
     questionResult.classList.remove('hide');
@@ -189,6 +202,18 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
+}
+
+function showResults() {
+    questionContainer.classList.add('hide');
+    resultsBtn.classList.add('hide');
+    quizResultsContainer.classList.remove('hide');
+    
+    qrTotalQuestions.innerText = questions.length;
+    qrTotalCorrect.innerText = score;
+    qrTotalWrong.innerText = questions.length - score;
+    qrScorePercentage.innerText = `${Math.round(((score * 100.00) / questions.length) * 100) / 100}%`;
+    qrTotalScore.innerText = `${score} / ${questions.length}`;
 }
 
 // Easy Quiz Questions

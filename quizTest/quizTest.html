@@ -14,6 +14,31 @@
             <div class="main header-1">New Zealand Quiz</div>
             <div class="main header-2">Select a difficulty:</div>
         </div>
+        <div id="quiz-results" class="quiz-results hide">
+            <div class="results-header">Quiz Results:</div>
+            <table>
+                <tr>
+                    <td>Total Questions</td>
+                    <td><span id="total-questions"></span></td>
+                </tr>
+                <tr>
+                    <td>Correct</td>
+                    <td><span id="total-correct"></span></td>
+                </tr>
+                <tr>
+                    <td>Wrong</td>
+                    <td><span id="total-wrong"></span></td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td><span id="score-percentage"></span></td>
+                </tr>
+                <tr>
+                    <td>Total Score</td>
+                    <td><span id="total-score"></span></td>
+                </tr>
+            </table>
+        </div>
         <div id="question-container" class="question-container hide">
             <div id="info-container" class="info-container">
                 <div id="score-info" class="score-info">Score: 0 / 1</div>
@@ -37,6 +62,7 @@
                 <button id="hard-btn" class="difficulty-btn btn">Hard</button>
             </div>
             <button id="next-btn" class="next-btn btn hide">Next</button>
+            <button id="results-btn" class="results-btn btn hide">Results</button>
             <button id="quit-btn" class="quit-btn btn hide">Quit</button>
         </div>
     </div>
