@@ -33,17 +33,17 @@ questionImg.addEventListener('click', showFullImg);
 closeBtn.addEventListener('click', closeFullImg);
 
 // Difficulty Button Events
-easyBtn.addEventListener('click', function() {
+easyBtn.addEventListener('click', function () {
     selectedDifficulty = 'Easy';
     startGame(selectedDifficulty);
 });
 
-mediumBtn.addEventListener('click', function() {
+mediumBtn.addEventListener('click', function () {
     selectedDifficulty = 'Medium';
     startGame(selectedDifficulty);
 });
 
-hardBtn.addEventListener('click', function() {
+hardBtn.addEventListener('click', function () {
     selectedDifficulty = 'Hard';
     startGame(selectedDifficulty);
 });
@@ -65,10 +65,11 @@ function startGame(selDifficulty) {
     score = 0;
 
     scoreInfo.innerText = `Score: ${score} / 0`;
+    
     difficultyContainer.classList.add('hide');
     mainHeader.classList.add('hide');
     quitBtn.classList.remove('hide');
-    
+
     if (selDifficulty == 'Easy') {
         questions = easyQuestions;
     } else if (selDifficulty == 'Medium') {
@@ -137,7 +138,9 @@ function showQuestion(question) {
 
 function resetState() {
     clearStatusClass(document.body);
+
     nextBtn.classList.add('hide');
+
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild);
     }
@@ -146,11 +149,15 @@ function resetState() {
 function selectAnswer(element) {
     const selBtn = element.target;
     const correct = selBtn.dataset.correct;
+
+    selBtn.classList.add('clicked');
     setStatusClass(document.body, correct);
+
     Array.from(answerBtns.children).forEach(btn => {
         setStatusClass(btn, btn.dataset.correct);
         btn.disabled = true;
     });
+
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextBtn.classList.remove('hide');
     }
@@ -171,6 +178,7 @@ function selectAnswer(element) {
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
+
     if (correct) {
         element.classList.add('correct');
     } else {

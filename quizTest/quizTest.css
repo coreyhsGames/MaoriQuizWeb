@@ -128,6 +128,12 @@ body::before {
     background-color: var(--hex-wrong);
 }
 
+.btn.clicked {
+    border: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
 .start-btn, .next-btn, .close-btn, .quit-btn, .difficulty-btn {
     font-size: 1.5rem;
     font-weight: bold;
