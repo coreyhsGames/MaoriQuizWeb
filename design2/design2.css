@@ -121,3 +121,86 @@ footer p {
 footer a:hover {
     color: rgba(255, 255, 255, 0.75);
 }
+
+.nav-bar-horizontal {
+    position: relative;
+    display: flex;
+    background-color: #1F1E28;
+    overflow: hidden;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+}
+
+.nav-bar-horizontal a,
+.nav-bar-horizontal .hamburger {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.5s ease;
+    margin: 0px 5px 0px 5px;
+    border-radius: 0.77vh;
+    cursor: pointer;
+}
+
+.nav-bar-horizontal .hamburger {
+    font-size: 2.5rem;
+    display: none;
+}
+
+.nav-bar-horizontal a:hover,
+.nav-bar-horizontal .hamburger:hover {
+    background-color: #3b3a52;
+}
+
+.nav-bar-horizontal a.active {
+    background-color: #02AAA1;
+}
+
+.nav-bar-horizontal img {
+    width: 400px;
+    margin: 5px 20px 5px 20px;
+}
+
+.nav-bar-vertical {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #1F1E28;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bar-vertical a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav-bar-vertical a:hover {
+    background-color: #3b3a52;
+}
+
+.nav-bar-vertical .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    margin: 10px;
+    padding: 14px;
+}

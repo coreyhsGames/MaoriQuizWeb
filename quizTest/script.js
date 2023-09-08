@@ -103,6 +103,7 @@ function quitGame() {
     questionContainer.classList.add('hide');
     nextBtn.classList.add('hide');
     quizResultsContainer.classList.add('hide');
+    resultsBtn.classList.add('hide');
 }
 
 function nextQuestion() {
@@ -335,6 +336,17 @@ const mediumQuestions = [
             { text: 'New Zealand Euro', correct: false },
             { text: 'New Zealand Mark', correct: false },
             { text: 'New Zealand Pound', correct: false }
+        ]
+    },
+    {
+        type: 'image',
+        question: "How many stars are on the current New Zealand flag?",
+        image: "../images/quizTest/mS5qMlfIZO.jpg",
+        answers: [
+            { text: '1 star', correct: false },
+            { text: '5 stars', correct: false },
+            { text: '3 stars', correct: false },
+            { text: '4 stars', correct: true }
         ]
     },
 ]
