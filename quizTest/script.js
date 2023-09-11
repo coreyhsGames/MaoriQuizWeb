@@ -2,6 +2,12 @@
 const quitBtn = document.getElementById('quit-btn');
 const nextBtn = document.getElementById('next-btn');
 const closeBtn = document.getElementById('close-btn');
+const usernameBtn = document.getElementById('username-btn');
+
+const mainHeader2 = document.getElementById('main-header-2');
+
+const usernameContainer = document.getElementById('username-container');
+const usernameInput = document.getElementById('username-input');
 
 // Answer Buttons
 const answerBtns = document.getElementById('answer-btns');
@@ -27,13 +33,14 @@ const hardBtn = document.getElementById('hard-btn');
 // Quiz Result Elements
 const quizResultsContainer = document.getElementById('quiz-results');
 const resultsBtn = document.getElementById('results-btn');
+const qrUsername = document.getElementById('username');
 const qrTotalQuestions = document.getElementById('total-questions');
 const qrTotalCorrect = document.getElementById('total-correct');
 const qrTotalWrong = document.getElementById('total-wrong');
 const qrScorePercentage = document.getElementById('score-percentage');
 const qrTotalScore = document.getElementById('total-score');
 
-let shuffledQuestions, currentQuestionIndex = 0, score = 0, selectedDifficulty, questions;
+let shuffledQuestions, currentQuestionIndex = 0, score = 0, selectedDifficulty, questions, username;
 
 // Click Events
 nextBtn.addEventListener('click', nextQuestion);
@@ -41,6 +48,7 @@ quitBtn.addEventListener('click', quitGame);
 questionImg.addEventListener('click', showFullImg);
 closeBtn.addEventListener('click', closeFullImg);
 resultsBtn.addEventListener('click', showResults);
+usernameBtn.addEventListener('click', submitUsername);
 
 // Difficulty Button Events
 easyBtn.addEventListener('click', function () {
@@ -70,6 +78,23 @@ function setFullImg(imgSrc) {
     fullImg.src = imgSrc;
 }
 
+function submitUsername() {
+    if (usernameInput.value <= 0) {
+        window.alert("Username must contain something!");
+    } else {
+        username = usernameInput.value;
+        showDifficultyBtns();
+    }
+}
+
+function showDifficultyBtns() {
+    usernameContainer.classList.add('hide');
+
+    mainHeader2.innerText = "Please select a difficulty:";
+
+    difficultyContainer.classList.remove('hide');
+}
+
 function startGame(selDifficulty) {
     questions = null;
     score = 0;
@@ -97,8 +122,11 @@ function startGame(selDifficulty) {
 }
 
 function quitGame() {
-    difficultyContainer.classList.remove('hide');
+    // Shows elements
     mainHeader.classList.remove('hide');
+    usernameContainer.classList.remove('hide');
+
+    // Hides elements
     quitBtn.classList.add('hide');
     questionContainer.classList.add('hide');
     nextBtn.classList.add('hide');
@@ -210,6 +238,7 @@ function showResults() {
     resultsBtn.classList.add('hide');
     quizResultsContainer.classList.remove('hide');
     
+    qrUsername.innerText = username;
     qrTotalQuestions.innerText = questions.length;
     qrTotalCorrect.innerText = score;
     qrTotalWrong.innerText = questions.length - score;

@@ -12,11 +12,15 @@
     <div class="container">
         <div id="main-header">
             <div class="main header-1">New Zealand Quiz</div>
-            <div class="main header-2">Select a difficulty:</div>
+            <div class="main header-2" id="main-header-2">Please enter a username:</div>
         </div>
         <div id="quiz-results" class="quiz-results hide">
             <div class="results-header">Quiz Results:</div>
             <table>
+                <tr>
+                    <td>Username</td>
+                    <td><span id="username"></span></td>
+                </tr>
                 <tr>
                     <td>Total Questions</td>
                     <td><span id="total-questions"></span></td>
@@ -42,8 +46,8 @@
         <div id="question-container" class="question-container hide">
             <div id="info-container" class="info-container">
                 <div id="score-info" class="score-info">Score: 0 / 1</div>
-                <div id="difficulty-info" class="difficulty-info">Testing</div>
                 <div id="question-info" class="question-info">Question 1 of 1</div>
+                <div id="difficulty-info" class="difficulty-info">Easy</div>
             </div>
             <div id="question" class="question">Question</div>
             <div title="Click to see full view" id="question-image" class="question-image" style="background-image: none;"></div>
@@ -56,7 +60,11 @@
             </div>
         </div>
         <div class="controls">
-            <div id="difficulty-btns" class="difficulty-btns">
+            <div id="username-container">
+                <input type="text" maxlength="20" placeholder="Username" id="username-input" class="username-input" name="username">
+                <button id="username-btn" class="username-btn btn">Continue</button>
+            </div>
+            <div id="difficulty-btns" class="difficulty-btns hide">
                 <button id="easy-btn" class="difficulty-btn btn">Easy</button>
                 <button id="medium-btn" class="difficulty-btn btn">Medium</button>
                 <button id="hard-btn" class="difficulty-btn btn">Hard</button>

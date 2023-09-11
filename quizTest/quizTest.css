@@ -1,8 +1,8 @@
 :root {
     --hex-neutral: #a9a9a9;
     --hex-neutral-hover: #7f7f7f;
-    --hex-wrong: red;
-    --hex-correct: green;
+    --hex-wrong: #ff4040;
+    --hex-correct: #40ff40;
 }
 
 body {
@@ -21,23 +21,23 @@ body {
 
 body::before {
     content: "";
-    position: absolute; 
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     background: black;
     opacity: 0.5;
-    height: 100%; 
+    height: 100%;
     z-index: -1;
 }
 
 .container {
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 0 10px 2px;
+    box-shadow: 0 0 5px 2px;
+    transform: scale(1);
 }
 
 .main {
@@ -46,22 +46,25 @@ body::before {
 }
 
 .main.header-1 {
-    font-size: 2rem;
+    color: white;
+    font-size: 42px;
 }
 
 .main.header-2 {
-    font-size: 1.5rem;
+    color: white;
+    font-size: 22px;
 }
 
 .question {
-    font-size: 2rem;
+    font-size: 38px;
     text-align: center;
     font-weight: bold;
+    color: white;
 }
 
 .question-result {
     margin: 5px;
-    font-size: 2.5rem;
+    font-size: 34px;
     text-align: center;
     font-weight: bold;
     transition: color 0.5s;
@@ -77,47 +80,62 @@ body::before {
 
 .info-container {
     margin: 0 0 20px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 1.25rem;
-    color: rgb(42, 42, 42);
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 24px;
     font-weight: bold;
+    color: white;
+}
+
+.info-container div {
+    display: table-cell;
+    text-align: center;
+}
+
+.username-input {
+    font-size: 24px;
+    border-radius: 10px;
+    margin: 5px;
 }
 
 .btn-grid {
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
+    grid-template-columns: 40% 40%;
+    grid-gap: 10px;
     margin: 20px 0;
+    justify-content: center;
 }
 
 #easy-btn {
     background-color: green;
+    color: white;
 }
 
 #medium-btn {
     background-color: orange;
+    color: white;
 }
 
 #hard-btn {
     background-color: red;
+    color: white;
 }
 
 .btn {
-    background-color: var(--hex-neutral);
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 10px;
     padding: 5px 10px;
-    color: white;
+    color: black;
     border-color: var(--hex-neutral);
     transition: background-color 0.5s;
     text-align: center;
-    font-size: 1rem;
+    font-size: 22px;
 }
 
 .btn:hover {
     border-color: black;
-    background-color: var(--hex-neutral-hover);
+    background-color: lightgray;
 }
 
 .btn.correct {
@@ -134,8 +152,13 @@ body::before {
     border-width: 3px;
 }
 
-.start-btn, .next-btn, .close-btn, .quit-btn, .difficulty-btn, .results-btn {
-    font-size: 1.5rem;
+.start-btn,
+.next-btn,
+.close-btn,
+.quit-btn,
+.difficulty-btn,
+.results-btn {
+    font-size: 30px;
     font-weight: bold;
     padding: 7px 12px;
     margin: 0 5px;
@@ -158,7 +181,7 @@ body::before {
     background-repeat: no-repeat;
     image-rendering: auto;
     cursor: pointer;
-    box-shadow: 0 0 10px 2px;
+    box-shadow: 0 0 0 2px #ffff;
 }
 
 .full-img-view {
@@ -175,7 +198,7 @@ body::before {
 .full-img {
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0 0 10px 2px;
+    box-shadow: 0 0 0 2px #ffff;
     margin-bottom: 25px;
 }
 
@@ -184,14 +207,16 @@ body::before {
 }
 
 .quiz-results .results-header {
-    font-size: 2rem;
+    font-size: 40px;
     font-weight: bold;
+    color: white;
 }
 
 .quiz-results table {
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0;
+    color: white;
 }
 
 .quiz-results table td {
@@ -200,7 +225,7 @@ body::before {
     font-weight: bold;
     text-align: left;
     width: 50%;
-    font-size: 1.25rem;
+    font-size: 18px;
 }
 
 .hide {
