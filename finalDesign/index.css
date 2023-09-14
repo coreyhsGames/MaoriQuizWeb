@@ -174,12 +174,12 @@ a.learnMore:hover {
 
 .footer {
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
 }
 
 .footer a {
     color: rgba(255, 255, 255, 0.25);
-    font-size: 1rem;
+    font-size: 24px;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.5s;
@@ -187,7 +187,7 @@ a.learnMore:hover {
 
 .footer p {
     color: rgba(255, 255, 255, 0.25);
-    font-size: 1.1rem;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -326,7 +326,7 @@ a.learnMore:hover {
 }
 
 .img-2 img {
-    width: 55%;
+    width: 75%;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px #000000;
 }
@@ -355,6 +355,23 @@ a.learnMore:hover {
         padding-left: unset;
         left: unset;
     }
+
+    .img-1 {
+        grid-column: 1 / 5;
+    }
+
+    .paragraph-1 {
+        grid-column: 1 / 5;
+        grid-row: 3;
+    }
+
+    .paragraph-2 {
+        grid-row: 4;
+    }
+
+    .img-2 {
+        grid-row: 5;
+    }
 }
 
 @media only screen and (max-width: 780px) {
@@ -363,11 +380,11 @@ a.learnMore:hover {
     }
 
     .text h1 {
-        font-size: 70px;
+        font-size: 60px;
     }
 
     .text h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .btn-section .text {
@@ -377,16 +394,6 @@ a.learnMore:hover {
     .btn-section svg {
         width: 35px;
         height: 35px;
-    }
-}
-
-@media only screen and (max-width: 780px) {
-    .text h1 {
-        font-size: 60px;
-    }
-
-    .text h2 {
-        font-size: 20px;
     }
 }
 
@@ -430,6 +437,18 @@ a.learnMore:hover {
         width: 20px;
         height: 20px;
     }
+
+    .footer a, .footer p {
+        font-size: 18px;
+    }
+
+    .about-info>div {
+        font-size: 18px;
+    }
+
+    .header-1 {
+        font-size: 32px !important;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -458,5 +477,9 @@ a.learnMore:hover {
     .btn-section svg {
         width: 15px;
         height: 15px;
+    }
+
+    .footer a, .footer p {
+        font-size: 14px;
     }
 }
