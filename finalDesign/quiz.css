@@ -1,0 +1,359 @@
+:root {
+    --hex-neutral: #a9a9a9;
+    --hex-neutral-hover: #7f7f7f;
+    --hex-wrong: #ff5c5c;
+    --hex-correct: #40ff40;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("images/WRKMDb7BkD.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.5;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    width: 1000px;
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px 2px;
+    transform: scale(1);
+}
+
+.main {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.main.header-1 {
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.main.header-2 {
+    color: white;
+    font-size: 22px;
+}
+
+.question {
+    font-size: 38px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.question-result {
+    margin: 5px;
+    font-size: 34px;
+    text-align: center;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.question-result.correct {
+    color: var(--hex-correct);
+}
+
+.question-result.wrong {
+    color: var(--hex-wrong);
+}
+
+.info-container {
+    margin: 0 0 20px 0;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.info-container div {
+    display: table-cell;
+    text-align: center;
+}
+
+.username-input {
+    font-size: 24px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+#easy-btn {
+    background-color: green;
+    color: white;
+}
+
+#medium-btn {
+    background-color: orange;
+    color: white;
+}
+
+#hard-btn {
+    background-color: red;
+    color: white;
+}
+
+.btn {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: black;
+    border-color: var(--hex-neutral);
+    transition: background-color 0.5s;
+    text-align: center;
+    font-size: 22px;
+}
+
+.btn:hover {
+    border-color: black;
+    background-color: lightgray;
+}
+
+.btn.correct {
+    background-color: var(--hex-correct);
+}
+
+.btn.wrong {
+    background-color: var(--hex-wrong);
+}
+
+.btn.clicked {
+    border: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+.start-btn,
+.next-btn,
+.close-btn,
+.quit-btn,
+.difficulty-btn,
+.results-btn,
+.start-quiz-btn, 
+.back-btn {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 7px 12px;
+    margin: 0 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.question-image {
+    display: block;
+    border-radius: 15px;
+    margin: 10px auto 10px auto;
+    width: 50%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: auto;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px #ffff;
+}
+
+.full-img-view {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.full-img {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px #ffff;
+    margin-bottom: 25px;
+}
+
+.quiz-results {
+    text-align: center;
+}
+
+.quiz-results .results-header {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.quiz-results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    color: white;
+}
+
+.quiz-results table td {
+    border: 1px solid #cccccc;
+    padding: 8px 15px;
+    font-weight: bold;
+    text-align: left;
+    width: 50%;
+    font-size: 18px;
+}
+
+.difficulty-info {
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.difficulty-info .difficulty-name {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.difficulty-info .difficulty-questions {
+    font-size: 22px;
+}
+
+.difficulty-info .difficulty-requirements {
+    font-size: 18px;
+}
+
+.nav-bar-horizontal {
+    position: relative;
+    display: flex;
+    background-color: #1F1E28;
+    overflow: hidden;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+}
+
+.nav-bar-horizontal a,
+.nav-bar-horizontal .hamburger {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.5s ease;
+    margin: 0px 5px 0px 5px;
+    border-radius: 0.77vh;
+    cursor: pointer;
+}
+
+.nav-bar-horizontal .hamburger {
+    font-size: 2.5rem;
+    display: none;
+}
+
+.nav-bar-horizontal a:hover,
+.nav-bar-horizontal .hamburger:hover {
+    background-color: #3b3a52;
+}
+
+.nav-bar-horizontal a.active {
+    background-color: #68e758;
+}
+
+.nav-bar-horizontal img {
+    width: 400px;
+    margin: 5px 20px 5px 20px;
+}
+
+.nav-bar-vertical {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #1F1E28;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bar-vertical a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav-bar-vertical a:hover {
+    background-color: #3b3a52;
+}
+
+.nav-bar-vertical .close-nav-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    margin: 10px;
+    padding: 14px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+    .nav-bar-horizontal .hamburger {
+        position: absolute;
+        display: block;
+        right: 10px;
+    }
+
+    .nav-bar-horizontal a {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .nav-bar-horizontal img {
+        width: 300px;
+    }
+}

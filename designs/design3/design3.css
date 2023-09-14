@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #68e758;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #68e758, 0.75;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffff;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+}
+
+section {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #282634;
+}
+
+#bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 0;
+    image-rendering: auto;
+    background-image: url("../images/design3/AucklandPano_MC.jpg");
+}
+
+#bg::before {
+    content:""; 
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgb(0, 0, 0) 150%);
+    height: 100%; 
+    z-index: 0;
+    transform: scaleX(-1);
+}
+
+.left-side {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    padding-left: 10%;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+}
+
+.btn-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#bg img {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+#text {
+    z-index: 1;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+}
+
+#text h1 {
+    color: #ffff;
+    font-size: 82px;
+}
+
+#text h2 {
+    color: #ffff;
+    margin-top: 5px;
+    font-size: 32px;
+}
+
+a.play {
+    background: #68e758;
+    margin: 25px;
+    padding: 1.07vh 2.67vh;
+    border-radius: 0.77vh;
+    transition: 0.5s;
+    display: flex;
+    place-items: center;
+    align-content: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.btn-section svg {
+    width: 50px;
+    height: 50px;
+}
+
+a.play div {
+    color: #000000;
+    font-size: 28px;
+    text-align: center;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-items: center;
+}
+
+a.play:hover {
+    background: #3bc529;
+}
+
+a.play {
+    background: #68e758;
+    margin: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: flex;
+    place-items: center;
+    align-content: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.btn-section svg {
+    width: 50px;
+    height: 50px;
+}
+
+a.learnMore {
+    background: #bebebe;
+    margin: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: flex;
+    place-items: center;
+    align-content: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+a.learnMore div {
+    color: #ffff;
+    font-size: 28px;
+    text-align: center;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-items: center;
+}
+
+a.learnMore:hover {
+    background: #a1a1a1;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-bar-horizontal {
+    position: relative;
+    display: flex;
+    background-color: #1F1E28;
+    overflow: hidden;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+}
+
+.nav-bar-horizontal a,
+.nav-bar-horizontal .hamburger {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.5s ease;
+    margin: 0px 5px 0px 5px;
+    border-radius: 0.77vh;
+    cursor: pointer;
+}
+
+.nav-bar-horizontal .hamburger {
+    font-size: 2.5rem;
+    display: none;
+}
+
+.nav-bar-horizontal a:hover,
+.nav-bar-horizontal .hamburger:hover {
+    background-color: #3b3a52;
+}
+
+.nav-bar-horizontal a.active {
+    background-color: #68e758;
+}
+
+.nav-bar-horizontal img {
+    width: 400px;
+    margin: 5px 20px 5px 20px;
+}
+
+.nav-bar-vertical {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #1F1E28;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bar-vertical a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav-bar-vertical a:hover {
+    background-color: #3b3a52;
+}
+
+.nav-bar-vertical .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    margin: 10px;
+    padding: 14px;
+}
+
+.about-info>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f2f2f2;
+    font-size: 24px;
+    background-color: #242333;
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.header-1 {
+    font-size: 48px !important;
+    font-weight: bold;
+
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+
+.img-1 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.img-1 img {
+    width: 100%;
+}
+
+.paragraph-1 {
+    grid-column: 2 / 5;
+    grid-row: 2;
+
+    text-align: left !important;
+}
+
+.paragraph-2 {
+    grid-column: 1 / 5;
+    grid-row: 3;
+}
+
+.img-2 {
+    grid-column: 1 / 5;
+    grid-row: 4;
+}
+
+.img-2 img {
+    width: 55%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #000000;
+}
+
+.about .about-info {
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+    .nav-bar-horizontal .hamburger {
+        position: absolute;
+        display: block;
+        right: 10px;
+    }
+
+    .nav-bar-horizontal a {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .nav-bar-horizontal img {
+        width: 300px;
+    }
+}

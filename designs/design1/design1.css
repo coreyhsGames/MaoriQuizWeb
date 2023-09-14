@@ -1,0 +1,463 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #02AAA1;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #02AAA1, 0.75;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1F1E28;
+}
+
+section.landing {
+    background-image: radial-gradient(#3e3e48, #131316, #0f0f12);
+}
+
+.stars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 19vw -41vh 0px 1px #fff, -50vw -9vh 1px 1px #fff, 17vw 27vh 1px 1px #fff, -12vw -24vh 0px 1px #fff, -50vw -48vh 1px 0px #fff, -43vw 19vh 0px 0px #fff, -36vw 25vh 0px 0px #fff, -10vw -6vh 0px 1px #fff, 13vw -39vh 0px 0px #fff, 29vw 14vh 1px 0px #fff, -32vw -16vh 0px 1px #fff, 7vw -28vh 1px 1px #fff, -45vw -14vh 0px 1px #fff, 3vw 38vh 1px 0px #fff, -32vw 15vh 0px 1px #fff, -34vw -48vh 0px 0px #fff, -1vw -36vh 1px 0px #fff, 4vw -4vh 0px 0px #fff, -14vw 4vh 0px 0px #fff, -5vw 25vh 0px 1px #fff, 48vw -28vh 1px 1px #fff, 9vw 18vh 0px 1px #fff, -8vw 26vh 0px 0px #fff, 30vw 24vh 0px 0px #fff, 5vw 4vh 0px 1px #fff, 13vw -7vh 0px 1px #fff, 26vw -49vh 0px 1px #fff, -42vw 20vh 1px 1px #fff, 12vw -8vh 1px 0px #fff, -30vw 42vh 1px 0px #fff, 24vw -21vh 0px 1px #fff, -27vw 36vh 1px 0px #fff, -6vw -15vh 1px 0px #fff, 22vw -40vh 1px 1px #fff, -6vw 25vh 0px 1px #fff, 20vw -22vh 1px 0px #fff, -28vw 0vh 0px 0px #fff, -2vw -15vh 1px 1px #fff, -34vw -3vh 1px 1px #fff, 5vw 13vh 1px 0px #fff, -9vw 18vh 1px 0px #fff, 8vw 35vh 0px 1px #fff, 9vw 30vh 1px 0px #fff, -18vw 38vh 1px 1px #fff, -13vw -7vh 1px 1px #fff, -29vw 1vh 1px 1px #fff, -44vw 24vh 0px 1px #fff, 29vw -18vh 0px 1px #fff, -19vw 5vh 0px 0px #fff, -50vw -19vh 0px 0px #fff, -34vw 14vh 0px 1px #fff, 22vw 32vh 0px 0px #fff, -7vw 10vh 0px 0px #fff, -40vw -4vh 0px 0px #fff, -38vw 12vh 0px 0px #fff, 25vw 37vh 1px 1px #fff, -9vw -3vh 1px 0px #fff, -2vw 44vh 1px 0px #fff, 3vw 16vh 0px 1px #fff, -9vw -2vh 0px 1px #fff, -19vw -48vh 1px 1px #fff, -12vw -47vh 0px 1px #fff, -18vw -7vh 1px 0px #fff, 34vw 28vh 0px 0px #fff, -8vw -8vh 1px 1px #fff, -50vw 31vh 1px 0px #fff, -43vw -39vh 1px 0px #fff, 5vw 37vh 0px 1px #fff, 17vw 36vh 0px 1px #fff, 46vw -24vh 1px 0px #fff, 16vw -50vh 1px 1px #fff, 21vw 18vh 1px 0px #fff, 20vw 25vh 0px 0px #fff, -13vw -34vh 0px 0px #fff, 22vw -16vh 0px 0px #fff, -31vw 5vh 1px 1px #fff, 50vw 40vh 1px 1px #fff, 41vw 46vh 0px 1px #fff, -22vw -34vh 1px 0px #fff, 14vw -6vh 1px 1px #fff, 47vw 7vh 1px 0px #fff, 31vw 2vh 0px 0px #fff, 43vw 0vh 0px 1px #fff, 39vw -4vh 1px 0px #fff, 25vw 29vh 1px 0px #fff, -42vw -3vh 1px 0px #fff, -48vw -11vh 1px 0px #fff, 9vw -35vh 1px 0px #fff, 45vw -45vh 0px 1px #fff, 4vw 5vh 0px 0px #fff, 10vw 2vh 0px 0px #fff, -46vw -44vh 1px 1px #fff, 33vw 9vh 1px 0px #fff, 29vw -23vh 1px 1px #fff, 29vw 49vh 0px 1px #fff, -34vw 6vh 1px 0px #fff, 39vw -48vh 1px 1px #fff, 20vw 22vh 0px 1px #fff, 24vw 0vh 1px 0px #fff, 42vw 25vh 0px 1px #fff, -17vw 42vh 1px 1px #fff, 21vw -22vh 1px 1px #fff, 40vw 33vh 1px 1px #fff, -47vw 33vh 1px 0px #fff, 5vw -27vh 1px 1px #fff, 32vw -44vh 1px 0px #fff, -42vw 3vh 0px 1px #fff, -47vw 25vh 0px 1px #fff, -8vw -20vh 0px 1px #fff, 14vw 47vh 0px 1px #fff, -8vw 6vh 1px 1px #fff, -6vw -39vh 0px 0px #fff, -43vw 40vh 1px 0px #fff, -38vw -34vh 0px 1px #fff, -37vw -12vh 1px 0px #fff, -44vw 1vh 1px 1px #fff, 10vw -5vh 0px 0px #fff, -35vw -48vh 1px 1px #fff, -50vw -29vh 0px 0px #fff, 0vw -27vh 1px 1px #fff, -26vw -44vh 1px 1px #fff, 31vw 20vh 0px 1px #fff, -10vw 35vh 0px 1px #fff, -49vw 14vh 1px 0px #fff, 14vw 3vh 0px 1px #fff, 24vw 23vh 1px 1px #fff, -16vw -42vh 1px 1px #fff, 23vw 3vh 1px 1px #fff, 48vw 10vh 0px 0px #fff, -28vw 38vh 1px 0px #fff, -25vw -42vh 0px 1px #fff, -43vw 28vh 0px 0px #fff, 15vw -28vh 1px 0px #fff, 22vw -3vh 1px 0px #fff, 36vw 2vh 1px 1px #fff, 26vw -31vh 1px 0px #fff, 30vw -2vh 0px 1px #fff, -41vw -41vh 0px 0px #fff, -22vw 32vh 1px 0px #fff, 24vw -14vh 1px 1px #fff, -47vw 32vh 1px 0px #fff, 2vw -29vh 0px 1px #fff, -25vw -8vh 0px 1px #fff, 2vw 26vh 0px 1px #fff, -14vw 1vh 1px 0px #fff, 33vw 3vh 1px 1px #fff, -27vw -10vh 0px 0px #fff, 39vw -39vh 0px 0px #fff, 45vw 34vh 0px 1px #fff, 24vw 7vh 1px 1px #fff, -48vw -9vh 0px 0px #fff, 10vw -8vh 0px 1px #fff, 3vw -40vh 1px 1px #fff, -7vw -38vh 1px 1px #fff, 0vw 38vh 0px 1px #fff, 25vw -2vh 0px 0px #fff, -29vw -5vh 1px 0px #fff, -11vw -46vh 0px 1px #fff, -5vw 2vh 0px 0px #fff, -9vw 43vh 0px 0px #fff, -1vw 50vh 1px 0px #fff, 46vw -26vh 0px 1px #fff, 36vw 8vh 0px 1px #fff, -4vw -47vh 0px 0px #fff, 0vw 13vh 1px 1px #fff, -50vw -30vh 0px 1px #fff, -36vw -43vh 0px 0px #fff, 17vw -8vh 0px 0px #fff, 7vw -48vh 0px 1px #fff, 17vw -18vh 0px 0px #fff, 12vw 12vh 1px 0px #fff, -24vw -38vh 1px 0px #fff, -11vw -7vh 1px 1px #fff, 10vw -40vh 1px 0px #fff, -27vw -3vh 1px 0px #fff, -12vw 15vh 0px 0px #fff, -16vw 27vh 0px 1px #fff, 46vw 39vh 1px 0px #fff, 18vw -9vh 1px 1px #fff, -2vw -12vh 1px 1px #fff, -28vw 31vh 0px 0px #fff, 16vw 46vh 0px 0px #fff, -10vw -26vh 0px 1px #fff, -39vw -31vh 0px 1px #fff, 2vw -16vh 0px 0px #fff, 46vw -31vh 1px 1px #fff, -5vw 42vh 1px 0px #fff, -33vw -22vh 1px 0px #fff, 21vw 38vh 1px 1px #fff, -50vw 39vh 0px 1px #fff, -44vw -34vh 0px 1px #fff, -20vw 15vh 0px 1px #fff, -35vw 23vh 0px 0px #fff, 35vw 44vh 1px 1px #fff, 48vw -5vh 1px 1px #fff, 0vw -46vh 1px 1px #fff, -12vw -6vh 1px 1px #fff, 15vw 18vh 1px 1px #fff, 3vw -30vh 1px 0px #fff, 2vw 0vh 1px 1px #fff, 17vw 15vh 1px 1px #fff, -20vw -23vh 1px 0px #fff, 8vw -49vh 0px 1px #fff, -15vw -3vh 0px 0px #fff, 46vw 48vh 0px 1px #fff, -36vw 41vh 0px 1px #fff, 17vw -19vh 0px 0px #fff, 11vw 49vh 1px 1px #fff, 9vw -38vh 1px 0px #fff, 20vw -29vh 1px 0px #fff, 33vw -49vh 0px 1px #fff, -40vw 27vh 0px 1px #fff, -24vw -6vh 0px 1px #fff, -18vw 26vh 0px 0px #fff, 30vw -6vh 0px 1px #fff, -22vw 23vh 0px 0px #fff, 46vw -18vh 1px 1px #fff, -19vw -32vh 1px 1px #fff, -46vw -32vh 0px 0px #fff, 16vw 9vh 0px 1px #fff, 3vw -14vh 0px 0px #fff, -22vw -34vh 1px 0px #fff, -21vw 39vh 1px 1px #fff, 34vw -48vh 1px 1px #fff, -9vw 19vh 1px 0px #fff, -19vw -28vh 0px 1px #fff, 38vw -16vh 0px 0px #fff, 30vw -9vh 1px 0px #fff, 45vw -4vh 0px 0px #fff, -21vw 37vh 0px 0px #fff, -46vw -12vh 0px 0px #fff, 19vw 15vh 1px 1px #fff, -49vw -25vh 1px 0px #fff, -15vw -36vh 1px 1px #fff, -43vw -9vh 0px 1px #fff, -26vw -17vh 1px 1px #fff, -47vw 29vh 0px 1px #fff, -22vw -42vh 0px 1px #fff, -11vw -9vh 0px 0px #fff, -28vw 47vh 1px 1px #fff, -24vw -14vh 1px 1px #fff, -24vw 5vh 0px 0px #fff, 48vw 28vh 0px 1px #fff, -20vw -23vh 1px 0px #fff, -43vw 15vh 0px 1px #fff, 12vw -19vh 1px 0px #fff, 49vw 17vh 1px 1px #fff, 25vw 29vh 1px 0px #fff, -39vw -13vh 1px 0px #fff, 27vw -21vh 1px 1px #fff, 49vw 39vh 1px 1px #fff, -32vw 27vh 1px 0px #fff, -50vw 11vh 1px 0px #fff, -17vw 4vh 0px 1px #fff, 38vw 34vh 1px 1px #fff, 31vw -1vh 0px 0px #fff, -16vw -43vh 0px 0px #fff, -41vw 20vh 0px 1px #fff, -31vw -44vh 0px 1px #fff, 18vw -19vh 0px 1px #fff, 27vw 19vh 0px 1px #fff, -6vw -29vh 0px 0px #fff, -19vw 37vh 1px 1px #fff, 3vw -35vh 0px 0px #fff, 37vw -16vh 1px 1px #fff, -22vw 16vh 0px 0px #fff, 24vw 50vh 1px 0px #fff, -48vw -22vh 0px 0px #fff, -16vw 35vh 1px 0px #fff, 10vw 10vh 1px 0px #fff, 28vw -27vh 1px 0px #fff, 3vw 34vh 1px 0px #fff, -42vw 31vh 0px 1px #fff, -29vw 36vh 1px 1px #fff, 33vw -15vh 1px 0px #fff, 3vw 36vh 0px 0px #fff, 24vw -7vh 1px 0px #fff, 18vw 26vh 0px 1px #fff, 32vw -35vh 0px 0px #fff, -25vw -49vh 1px 1px #fff, 41vw -46vh 1px 0px #fff, -21vw -44vh 1px 1px #fff, 34vw -25vh 0px 1px #fff, -4vw 32vh 1px 1px #fff, 41vw 1vh 1px 1px #fff, -48vw 5vh 1px 0px #fff, -17vw 31vh 0px 0px #fff, -38vw -16vh 0px 1px #fff, 25vw -4vh 1px 0px #fff, -12vw -30vh 0px 1px #fff, 12vw 8vh 1px 0px #fff, 50vw -3vh 1px 0px #fff, -46vw -26vh 0px 0px #fff, 34vw -41vh 1px 0px #fff, 20vw 11vh 1px 1px #fff, 21vw -17vh 1px 1px #fff, -34vw 30vh 1px 1px #fff, -30vw -43vh 0px 1px #fff, 48vw -39vh 0px 0px #fff, -32vw -4vh 0px 0px #fff, 26vw -37vh 1px 1px #fff, -27vw 3vh 0px 0px #fff, 6vw 40vh 0px 0px #fff, -15vw 13vh 1px 1px #fff, 46vw 20vh 1px 1px #fff, 16vw -43vh 1px 0px #fff, 21vw 11vh 1px 0px #fff, 24vw -13vh 0px 0px #fff, 39vw -17vh 0px 1px #fff, -36vw -1vh 0px 1px #fff, 44vw 22vh 0px 1px #fff, -13vw -35vh 0px 0px #fff, 40vw -4vh 0px 1px #fff, 33vw -27vh 0px 1px #fff, -29vw 50vh 0px 1px #fff, -44vw 31vh 1px 0px #fff, -49vw 16vh 0px 0px #fff, -14vw 49vh 1px 1px #fff, -40vw 7vh 0px 1px #fff, -50vw 31vh 0px 1px #fff, 48vw -33vh 0px 0px #fff, -40vw 25vh 1px 0px #fff, -21vw -41vh 1px 1px #fff, 32vw 47vh 1px 1px #fff, -41vw 5vh 0px 1px #fff, 1vw 48vh 1px 1px #fff, 18vw 21vh 1px 1px #fff, -26vw -45vh 1px 1px #fff, 8vw -17vh 0px 1px #fff, -4vw -39vh 0px 0px #fff, 42vw -9vh 1px 0px #fff, 7vw 44vh 1px 0px #fff, -23vw -46vh 1px 1px #fff, 38vw 49vh 0px 1px #fff, -29vw 1vh 1px 0px #fff, -35vw -36vh 0px 0px #fff, 2vw 32vh 0px 1px #fff, -6vw -46vh 0px 1px #fff, 22vw 12vh 1px 1px #fff, -42vw 24vh 0px 1px #fff, -21vw -49vh 1px 1px #fff, 0vw -20vh 0px 1px #fff, 32vw -49vh 1px 0px #fff, -1vw -11vh 0px 0px #fff, -19vw -43vh 0px 0px #fff, 38vw 7vh 0px 1px #fff, -45vw -19vh 1px 0px #fff, -14vw 23vh 0px 1px #fff, -10vw 18vh 1px 1px #fff, 38vw -44vh 0px 0px #fff, -2vw 11vh 0px 1px #fff, 0vw -34vh 1px 0px #fff, 18vw 41vh 0px 0px #fff, 19vw 38vh 0px 0px #fff, -30vw -8vh 0px 0px #fff, 47vw 14vh 0px 0px #fff, 42vw -40vh 1px 0px #fff, 16vw 14vh 1px 0px #fff, -7vw 18vh 1px 0px #fff, -4vw -15vh 1px 1px #fff, 10vw -2vh 0px 1px #fff, -9vw -33vh 0px 1px #fff, 0vw -38vh 0px 0px #fff, 13vw -5vh 1px 1px #fff, 31vw -43vh 1px 1px #fff, 24vw 14vh 0px 0px #fff, -1vw -14vh 1px 0px #fff, -35vw 46vh 1px 0px #fff, -47vw 35vh 0px 1px #fff, 15vw 32vh 0px 0px #fff, 44vw 2vh 0px 1px #fff, 23vw -34vh 0px 0px #fff, 16vw -46vh 1px 0px #fff, -37vw -14vh 0px 1px #fff, 25vw 0vh 1px 0px #fff, -49vw 48vh 0px 0px #fff, -7vw -10vh 1px 0px #fff, -33vw -30vh 0px 1px #fff, -7vw -4vh 0px 1px #fff, -48vw -19vh 1px 1px #fff, 28vw -30vh 0px 1px #fff, 7vw 7vh 1px 1px #fff, 46vw 2vh 1px 1px #fff, -29vw -25vh 0px 0px #fff, -33vw -3vh 1px 1px #fff, -30vw -24vh 0px 1px #fff, 44vw -46vh 0px 0px #fff, -2vw -34vh 0px 1px #fff, 3vw -8vh 0px 1px #fff, 1vw 49vh 0px 1px #fff, -16vw 25vh 0px 0px #fff, -24vw -42vh 0px 0px #fff, 26vw -2vh 0px 1px #fff, -43vw 40vh 1px 1px #fff, -23vw -34vh 0px 1px #fff, -10vw 3vh 0px 1px #fff, -7vw -9vh 0px 0px #fff, -18vw 46vh 1px 1px #fff, -5vw 35vh 0px 1px #fff, -1vw 32vh 0px 1px #fff;
+    animation: zoom 15s ease-in-out alternate infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.landing .earth {
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    background: url("../images/design1/earthMap.jpg") repeat-x;
+    image-rendering: auto;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: -20px -20px 50px 2px #000000 inset, 0 0 20px 2px #000000;
+    animation: spin 240s linear infinite;
+    z-index: 1;
+}
+
+@keyframes spin {
+    to {
+        background-position: 8192px 0;
+    }
+}
+
+.landing .box {
+    background: #1F1E28;
+    width: 560px;
+    height: 140px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+.landing h1 {
+    color: #ffff;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.landing h2 {
+    color: #ffff;
+    font-size: 1.75rem;
+    margin: 5px;
+}
+
+.landing .playbtn {
+    background: #02AAA1;
+    width: 150px;
+    height: 65px;
+    margin: 25px;
+    border-radius: 10px;
+    transition: width 0.5s, height 0.5s, background-color 0.5s ease;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.landing .playbtn div {
+    color: #ffff;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: font-size 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+.landing .playbtn:hover {
+    width: 175px;
+    height: 85px;
+}
+
+.landing .playbtn:hover div {
+    font-size: 1.8rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-bar-horizontal {
+    position: relative;
+    display: flex;
+    background-color: #1F1E28;
+    overflow: hidden;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+}
+
+.nav-bar-horizontal a,
+.nav-bar-horizontal .hamburger {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.5s ease;
+    margin: 0px 5px 0px 5px;
+    border-radius: 0.77vh;
+    cursor: pointer;
+}
+
+.nav-bar-horizontal .hamburger {
+    font-size: 2.5rem;
+    display: none;
+}
+
+.nav-bar-horizontal a:hover,
+.nav-bar-horizontal .hamburger:hover {
+    background-color: #3b3a52;
+}
+
+.nav-bar-horizontal a.active {
+    background-color: #02AAA1;
+}
+
+.nav-bar-horizontal img {
+    width: 400px;
+    margin: 5px 20px 5px 20px;
+}
+
+.nav-bar-vertical {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #1F1E28;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-bar-vertical a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav-bar-vertical a:hover {
+    background-color: #3b3a52;
+}
+
+.nav-bar-vertical .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    margin: 10px;
+    padding: 14px;
+}
+
+.about-info>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f2f2f2;
+    font-size: 24px;
+    background-color: #242333;
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.header-1 {
+    font-size: 48px !important;
+    font-weight: bold;
+
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+
+.img-1 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.img-1 img {
+    width: 100%;
+}
+
+.paragraph-1 {
+    grid-column: 2 / 5;
+    grid-row: 2;
+
+    text-align: left !important;
+}
+
+.paragraph-2 {
+    grid-column: 1 / 5;
+    grid-row: 3;
+}
+
+.img-2 {
+    grid-column: 1 / 5;
+    grid-row: 4;
+}
+
+.img-2 img {
+    width: 55%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #000000;
+}
+
+.about .about-info {
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 950px) {
+    .nav-bar-horizontal .hamburger {
+        position: absolute;
+        display: block;
+        right: 10px;
+    }
+
+    .nav-bar-horizontal a {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .nav-bar-horizontal img {
+        width: 300px;
+    }
+
+    .landing #earth {
+        width: 460px;
+        height: 460px;
+    }
+
+    .landing #box {
+        width: 325px;
+        height: 75px;
+    }
+
+    .landing h1 {
+        font-size: 2rem;
+    }
+
+    .landing h2 {
+        font-size: 1rem;
+    }
+
+    .landing #playbtn {
+        width: 130px;
+        height: 45px;
+    }
+
+    .landing #playbtn:hover {
+        width: 155px;
+        height: 65px;
+    }
+
+    .landing #playbtn div {
+        font-size: 1rem;
+    }
+
+    .landing #playbtn:hover div {
+        font-size: 1.5rem;
+    }
+
+    .landing footer a {
+        font-size: 0.8rem;
+    }
+
+    .landing footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .landing #earth {
+        width: 40vh;
+        height: 40vh;
+    }
+
+    .landing #box {
+        width: 25vh;
+        height: 5vh;
+    }
+
+    .landing h1 {
+        font-size: 2.5vh;
+    }
+
+    .landing h2 {
+        font-size: 1.28vh;
+    }
+
+    .landing #playbtn {
+        width: 12vh;
+        height: 6vh;
+    }
+
+    .landing #playbtn:hover {
+        width: 14vh;
+        height: 8vh;
+    }
+
+    .landing #playbtn div {
+        font-size: 2vh;
+    }
+
+    .landing #playbtn:hover div {
+        font-size: 2.5vh;
+    }
+
+    .landing footer a {
+        font-size: 1.5vh;
+    }
+
+    .landing footer p {
+        font-size: 1.5vh;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .landing #earth {
+        width: 35vh;
+        height: 35vh;
+    }
+
+    .landing #box {
+        width: 20vh;
+        height: 6vh;
+    }
+
+    .landing h1 {
+        font-size: 2.3vh;
+    }
+
+    .landing h2 {
+        font-size: 1.3vh;
+    }
+
+    .landing #playbtn {
+        width: 14vh;
+        height: 5vh;
+    }
+
+    .landing #playbtn:hover {
+        width: 16vh;
+        height: 7vh;
+    }
+
+    .landing #playbtn div {
+        font-size: 2vh;
+    }
+
+    .landing #playbtn:hover div {
+        font-size: 2.5vh;
+    }
+
+    .landing footer a {
+        font-size: 1.25vh;
+    }
+
+    .landing footer p {
+        font-size: 1.25vh;
+    }
+}

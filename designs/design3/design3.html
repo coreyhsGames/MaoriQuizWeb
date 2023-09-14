@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design3.css">
+    <title>Design 3</title>
+</head>
+
+<body>
+    <div class="nav-bar-horizontal">
+        <img src="../images/logo.png" class="logo">
+        <div style="margin-right: 25px;">
+            <a href="design1.html" class="active">Home</a>
+            <a href="../quizTest/quizTest.html">Play Quiz</a>
+            <a href="#about">About</a>
+            <a href="sources.html">Sources</a>
+        </div>
+        <span id="hamburger" class="hamburger">&#9776;</span>
+    </div>
+    <div id="vertical-nav-bar" class="nav-bar-vertical">
+        <a href="javascript:void(0)" id="close-btn" class="close-btn">X</a>
+        <a href="design1.html" class="active">Home</a>
+        <a href="../quizTest/quizTest.html">Play Quiz</a>
+        <a href="#about">About</a>
+        <a href="sources.html">Sources</a>
+    </div>
+    <section>
+        <div id="bg"></div>
+        <div class="left-side">
+            <div id="text">
+                <h1>New Zealand Quiz</h1>
+                <h2>Geography, History, and Flags</h2>
+            </div>
+            <div class="btn-section">
+                <a class="play" href="#">
+                    <div>Play Quiz</div>
+                    <svg viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                    </svg>
+                </a>
+                <a class="learnMore" href="#">
+                    <div>Learn More</div>
+                    <svg fill="#ffff" viewBox="0 0 16 16">
+                        <path
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <span style="margin-top: 15px;"></span>
+        <div class="about-info">
+            <div class="header-1">About</div>
+            <div class="img-1"><img src="../images/logo.png"></div>
+            <div class="paragraph-1">This is a New Zealand Quiz about it's geography, histroy, and flags. There are 3 difficulties, Easy, Medium and Hard. Each difficulty has 10 questions. Each question will have a maximum of 4 options you can choose. Questions can have more than 1 answer.</div>
+            <div class="paragraph-2">Here is an example of what the quiz looks like:</div>
+            <div class="img-2"><img src="../images/design1/quizExample-1.png"></div>
+        </div>
+        <br><br><br>
+        <div class="footer">
+            <a href="https://github.com/coreyhsGames">Design 1 - Created by coreyhsGames</a>
+            <p style="display: inline-block;">|</p>
+            <a href="../../index.html">Temporary Navigation</a>
+        </div>
+    </section>
+</body>
+<script>
+    // Vertical navigation bar
+    const verticalNavBar = document.getElementById('vertical-nav-bar');
+
+    const hamburger = document.getElementById('hamburger');
+    const closeBtn = document.getElementById('close-btn');
+
+    hamburger.addEventListener('click', function () {
+        verticalNavBar.style.width = "100%";
+    });
+
+    closeBtn.addEventListener('click', function () {
+        verticalNavBar.style.width = "0%";
+    });
+</script>
+
+</html>
