@@ -253,7 +253,7 @@ function resetState() {
 
 // Triggered when a option is clicked
 function selectAnswer() {
-    const selBtn = event.target;
+    const selBtn = event.target; // Gets the element that was clicked using event.target
     const correct = selBtn.dataset.correct;
 
     selBtn.classList.add('clicked');
@@ -308,6 +308,7 @@ function showResults() {
 
     quizResultsContainer.classList.remove('hide');
 
+    // Updates the text for each element
     qrUsername.innerText = username;
     qrTotalQuestions.innerText = difficulty.questions.length;
     qrTotalCorrect.innerText = score;
