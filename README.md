@@ -10,7 +10,8 @@ The website is written in HTML (HyperText Markup Language), CSS (Cascading Style
 This quiz requires a basic amount of knowledge about geography, history, flags.
 
 ## How To Play Quiz
-TBA
+Naviagate to the quiz.html file or click on "Play Quiz" on the main page. You will then be taken to the quiz, enter a username, select a difficutly and start playing!
 
 ## Tips
-TBA
+- You can click on the image for a question to get the full view of the image.
+- Feel free to zoom in or out to get the view of the quiz you would like.
