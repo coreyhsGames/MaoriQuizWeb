@@ -27,7 +27,7 @@
         <a href="javascript:void(0)" id="close-btn" class="close-btn">X</a>
         <a href="index.html" class="active">Home</a>
         <a href="quiz.html">Play Quiz</a>
-        <a href="#about">About</a>
+        <a href="#about" id="vertical-about-btn">About</a>
         <a href="sources.html">Sources</a>
     </div>
     <section>
@@ -79,6 +79,8 @@
 
     const hamburger = document.getElementById('hamburger');
     const closeBtn = document.getElementById('close-btn');
+    
+    const vertAboutBtn = document.getElementById('vertical-about-btn');
 
     hamburger.addEventListener('click', function () {
         verticalNavBar.style.width = "100%";
@@ -87,6 +89,10 @@
     closeBtn.addEventListener('click', function () {
         verticalNavBar.style.width = "0%";
     });
+
+    vertAboutBtn.addEventListener('click', function () {
+        verticalNavBar.style.width = "0%";
+    })
 </script>
 
 </html>

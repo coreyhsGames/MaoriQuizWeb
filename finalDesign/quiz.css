@@ -27,7 +27,7 @@ body::before {
     left: 0;
     right: 0;
     background: black;
-    opacity: 0.5;
+    opacity: 0.25;
     height: 100%;
     z-index: -1;
 }
@@ -338,6 +338,29 @@ body::before {
     padding: 14px;
 }
 
+.footer {
+    position: absolute;
+    bottom: 5px;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .hide {
     display: none !important;
 }
@@ -419,6 +442,10 @@ body::before {
     .question-image {
         height: 100px;
     }
+
+    .footer a, .footer p {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -440,5 +467,9 @@ body::before {
 
     .btn {
         font-size: 12px;
+    }
+
+    .footer a, .footer p {
+        font-size: 14px;
     }
 }
