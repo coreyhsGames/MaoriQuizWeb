@@ -252,8 +252,8 @@ function resetState() {
 }
 
 // Triggered when a option is clicked
-function selectAnswer(element) {
-    const selBtn = element.target;
+function selectAnswer() {
+    const selBtn = event.target;
     const correct = selBtn.dataset.correct;
 
     selBtn.classList.add('clicked');
