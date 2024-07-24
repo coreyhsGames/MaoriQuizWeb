@@ -523,7 +523,7 @@ const mediumQuestions = {
         },
         {
             type: 'word',
-            question: 'What is the Maori name for Auckland?',
+            question: 'What is the Maori name for New Zealand?',
             answers: [
                 { text: 'Niu Tirani', correct: false },
                 { text: 'Aotearoa', correct: true },
